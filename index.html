@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Landing Page</title>
+    <title>TECHNOVA | Advanced Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,6 +13,7 @@
         <ul class="nav-links">
             <li><a href="#features">Features</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
             <button class="btn-primary">Get Started</button>
         </ul>
     </nav>
@@ -27,10 +29,44 @@
         </div>
     </header>
 
+    <section id="about" class="about reveal">
+        <div class="container">
+            <h2>Why Choose <span class="gradient-text">Our Strategy</span>?</h2>
+            <p>আমরা আধুনিক ওয়েব টেকনোলজি ব্যবহার করে আপনার ব্যবসার জন্য হাই-পারফরম্যান্স এবং সিকিউর সলিউশন তৈরি করি।</p>
+        </div>
+    </section>
+
     <section id="features" class="features grid-layout">
-        <div class="card reveal"><h3>Fast</h3><p>Optimized for speed.</p></div>
-        <div class="card reveal"><h3>Secure</h3><p>Encryption by default.</p></div>
-        <div class="card reveal"><h3>Scalable</h3><p>Grows with your team.</p></div>
+        <div class="card reveal">
+            <div class="icon">🚀</div>
+            <h3>Fast</h3>
+            <p>Optimized for lightning speed and performance.</p>
+        </div>
+        <div class="card reveal">
+            <div class="icon">🛡️</div>
+            <h3>Secure</h3>
+            <p>Industry standard encryption by default.</p>
+        </div>
+        <div class="card reveal">
+            <div class="icon">📊</div>
+            <h3>Scalable</h3>
+            <p>Grows seamlessly with your team and traffic.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+        <div class="card-contact">
+            <h2>Ready to <span class="gradient-text">Connect</span>?</h2>
+            <form id="orderForm">
+                <div class="input-group">
+                    <input type="text" placeholder="আপনার নাম" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" placeholder="মোবাইল নম্বর" required>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <script src="script.js"></script>

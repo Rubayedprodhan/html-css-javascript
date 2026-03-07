@@ -2,11 +2,21 @@
     --primary: #6366f1;
     --bg-dark: #0f172a;
     --glass: rgba(255, 255, 255, 0.05);
+    --text-muted: #94a3b8;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+* { 
+    margin: 0; padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; 
+}
 
-body { background-color: var(--bg-dark); color: white; overflow-x: hidden; }
+body { 
+    background-color: var(--bg-dark); 
+    color: white; 
+    overflow-x: hidden; 
+    line-height: 1.6;
+}
 
 /* Glassmorphism Navbar */
 .glass-nav {
@@ -16,9 +26,37 @@ body { background-color: var(--bg-dark); color: white; overflow-x: hidden; }
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 1000;
+    transition: 0.4s ease;
 }
 
-/* Gradient Text Effect */
+.logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; }
+.logo span { color: var(--primary); }
+
+.nav-links { display: flex; list-style: none; gap: 2.5rem; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text-muted); transition: 0.3s; }
+.nav-links a:hover { color: white; }
+
+/* Buttons */
+.btn-primary {
+    background: var(--primary);
+    color: white; border: none;
+    padding: 0.8rem 1.8rem; border-radius: 8px;
+    font-weight: 600; cursor: pointer; transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white; border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 1.8rem; border-radius: 8px;
+    cursor: pointer; transition: 0.3s; margin-left: 1rem;
+}
+
+/* Gradient Text */
 .gradient-text {
     background: linear-gradient(90deg, #818cf8, #c084fc);
     -webkit-background-clip: text;
@@ -33,26 +71,52 @@ body { background-color: var(--bg-dark); color: white; overflow-x: hidden; }
     background: radial-gradient(circle at top right, #1e1b4b, var(--bg-dark));
 }
 
-.hero h1 { font-size: 4rem; margin-bottom: 1rem; }
+.hero h1 { font-size: 4.5rem; margin-bottom: 1.5rem; line-height: 1.1; }
+.hero p { color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; font-size: 1.2rem; }
 
 /* Grid Features */
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem; padding: 5rem 10%;
 }
 
 .card {
     background: var(--glass);
-    padding: 2rem; border-radius: 15px;
+    padding: 3rem 2rem; border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s ease; text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+/* Contact Section */
+.contact { padding: 5rem 10%; display: flex; justify-content: center; }
+.card-contact {
+    background: var(--glass);
+    padding: 3rem; border-radius: 20px;
+    width: 100%; max-width: 600px; border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-group { margin-bottom: 1.5rem; }
+.input-group input {
+    width: 100%; padding: 1rem;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px; color: white; outline: none;
 }
 
 /* Animation Classes */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transform: translateY(40px);
+    transition: all 0.9s ease-out;
 }
 
 .reveal.active {
