@@ -2,72 +2,319 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHNOVA | Advanced Landing Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="TECHNOVA - Advanced digital craft solutions with cutting-edge performance and security.">
+    <title>TECHNOVA | Nexus of Digital Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <canvas id="particle-canvas"></canvas>
+    <div class="gradient-orb"></div>
+
+    <!-- Navigation -->
     <nav class="glass-nav">
         <div class="logo">TECH<span>NOVA</span></div>
-        <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features-core">Features</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
-            <button class="btn-primary">Get Started</button>
+            <li><button class="btn-primary" id="getStartedNav">Get Started</button></li>
         </ul>
+        <button class="mobile-menu-btn" id="mobileMenuToggle"><i class="fas fa-bars"></i></button>
     </nav>
 
-    <header class="hero">
+
+    <!-- Hero-->
+    <header id="home" class="hero">
         <div class="hero-content reveal">
-            <h1>The Future of <br><span class="gradient-text">Digital Craft</span></h1>
-            <p>Experience seamless performance with our advanced architecture and modern aesthetics.</p>
+            <h1>Engineer Tomorrow's <br><span class="gradient-text">Digital Empire</span></h1>
+            <p>Cutting-edge performance, military-grade security, and limitless scalability — redefine what's possible.</p>
             <div class="cta-group">
-                <button class="btn-primary">Launch Project</button>
-                <button class="btn-secondary">View Demo</button>
+                <button class="btn-primary" id="heroLaunchBtn">Launch Project</button>
+                <button class="btn-secondary" id="heroDemoBtn">View Demo</button>
             </div>
         </div>
     </header>
 
-    <section id="about" class="about reveal">
+
+
+
+
+
+
+
+    <!-- Stats -->
+    <section class="stats-section reveal">
         <div class="container">
-            <h2>Why Choose <span class="gradient-text">Our Strategy</span>?</h2>
-            <p>আমরা আধুনিক ওয়েব টেকনোলজি ব্যবহার করে আপনার ব্যবসার জন্য হাই-পারফরম্যান্স এবং সিকিউর সলিউশন তৈরি করি।</p>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="128">0</div>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="45">0</div>
+                    <p>Expert Engineers</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="99" data-suffix="%">0%</div>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <p>Global Awards</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="features" class="features grid-layout">
-        <div class="card reveal">
-            <div class="icon">🚀</div>
-            <h3>Fast</h3>
-            <p>Optimized for lightning speed and performance.</p>
-        </div>
-        <div class="card reveal">
-            <div class="icon">🛡️</div>
-            <h3>Secure</h3>
-            <p>Industry standard encryption by default.</p>
-        </div>
-        <div class="card reveal">
-            <div class="icon">📊</div>
-            <h3>Scalable</h3>
-            <p>Grows seamlessly with your team and traffic.</p>
+
+
+
+
+
+    <!-- Features-->
+    <section id="features-core" class="features-section">
+        <div class="container">
+            <h2 class="section-title reveal">Core <span class="gradient-text">Capabilities</span></h2>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Lightning Speed</h3>
+                    <p>Optimized edge delivery with sub‑millisecond response times.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Quantum Encryption</h3>
+                    <p>Post-quantum cryptography to future-proof your data.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Auto‑scaling</h3>
+                    <p>Seamless horizontal scaling across global clusters.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI Analytics</h3>
+                    <p>Predictive insights powered by machine learning.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Edge Deployment</h3>
+                    <p>Deploy to 200+ edge locations worldwide.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3>CI/CD Ready</h3>
+                    <p>Built-in pipelines for modern DevOps workflows.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact reveal">
-        <div class="card-contact">
-            <h2>Ready to <span class="gradient-text">Connect</span>?</h2>
-            <form id="orderForm">
-                <div class="input-group">
-                    <input type="text" placeholder="আপনার নাম" required>
+
+
+
+
+
+    <!-- About-->
+    <section id="about" class="about-section reveal">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Why <span class="gradient-text">TECHNOVA</span>?</h2>
+                <p>We blend bleeding‑edge technology with human‑centric design. Our platform is trusted by Fortune 500 companies and fast‑growing startups alike. Every solution is architected for resilience, scalability, and uncompromised security.</p>
+                <div class="about-stats-mini">
+                    <div><i class="fas fa-check-circle"></i> 99.99% Uptime SLA</div>
+                    <div><i class="fas fa-clock"></i> 24/7 Priority Support</div>
+                    <div><i class="fas fa-lock"></i> GDPR & SOC2 Compliant</div>
                 </div>
-                <div class="input-group">
-                    <input type="tel" placeholder="মোবাইল নম্বর" required>
-                </div>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
+            </div>
         </div>
     </section>
+
+
+
+
+
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title reveal">What <span class="gradient-text">Clients Say</span></h2>
+            <div class="testimonial-slider reveal">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"TECHNOVA transformed our digital infrastructure. Speed and security are beyond expectations."</p>
+                        <h4>— Maria Chen, CTO of Aether</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The scalability is insane. We handled 10x traffic without any hiccup. Highly recommended."</p>
+                        <h4>— James O'Connor, Founder of SwiftScale</h4>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Best decision we made. The AI analytics gave us insights we never had before."</p>
+                        <h4>— Priya Kapoor, Product Lead</h4>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="slider-btn" id="prevSlide"><i class="fas fa-chevron-left"></i> Prev</button>
+                    <button class="slider-btn" id="nextSlide">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title reveal">Flexible <span class="gradient-text">Plans</span></h2>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <h3>Starter</h3>
+                    <div class="price">$49<span>/mo</span></div>
+                    <ul>
+                        <li>✓ 10k API calls</li>
+                        <li>✓ Basic analytics</li>
+                        <li>✓ Community support</li>
+                    </ul>
+                    <button class="btn-outline-light">Choose Plan</button>
+                </div>
+                <div class="pricing-card reveal featured">
+                    <h3>Pro</h3>
+                    <div class="price">$99<span>/mo</span></div>
+                    <ul>
+                        <li>✓ 100k API calls</li>
+                        <li>✓ Advanced AI insights</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ Custom domains</li>
+                    </ul>
+                    <button class="btn-primary">Get Pro</button>
+                </div>
+                <div class="pricing-card reveal">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <ul>
+                        <li>✓ Unlimited scale</li>
+                        <li>✓ Dedicated SLAs</li>
+                        <li>✓ On-premise options</li>
+                    </ul>
+                    <button class="btn-outline-light">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title reveal">Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <div class="faq-question">What is TECHNOVA’s uptime guarantee? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">We offer a 99.99% uptime SLA backed by financial credits if unmet.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question">Can I migrate my existing infrastructure? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Absolutely. Our migration engineers provide seamless transition with zero downtime.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question">Do you offer a free trial? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Yes, 14-day free trial with full access to Pro features — no credit card required.</div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-question">Is TECHNOVA GDPR compliant? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Yes, we are fully GDPR, CCPA, and SOC2 Type II compliant.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Contact-->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title reveal">Let's <span class="gradient-text">Connect</span></h2>
+            <div class="contact-card reveal">
+                <form id="advancedContactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="3" placeholder="Your message or project details..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%">Send Message <i class="fas fa-paper-plane"></i></button>
+                    <p class="form-note" style="margin-top:1rem; font-size:0.8rem; color:var(--text-muted);">We'll get back to you within 24 hours.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">TECH<span>NOVA</span></div>
+                <p>Shaping the future of digital craft.</p>
+                <div class="social-icons">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-github"></i>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Product</h4>
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">Security</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 TECHNOVA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="script.js"></script>
 </body>
